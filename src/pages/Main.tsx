@@ -1,9 +1,29 @@
 import React from 'react';
 import Section from '../components/Section';
+import FavoriteItems from '../components/FavoriteItems';
+import Notifications from '../components/Notifications';
 
 type Props = {};
 
 const Main = (props: Props) => {
+	const notifications = [
+		{
+			title: 'Заголовок номер 1',
+			description: 'Текст уведомления номер 1 длинного в N символов...',
+			imageUrl: 'https://via.placeholder.com/40'
+		},
+		{
+			title: 'Заголовок номер 2',
+			description: 'Текст уведомления номер 2 длинного в N символов...',
+			imageUrl: 'https://via.placeholder.com/40'
+		},
+		{
+			title: 'Заголовок номер 3',
+			description: 'Текст уведомления номер 3 длинного в N символов...',
+			imageUrl: 'https://via.placeholder.com/40'
+		}
+	];
+
 	return (
 		<div>
 			<h1 className="mb-[32px] text-[30px] font-medium">Профиль</h1>
@@ -33,7 +53,7 @@ const Main = (props: Props) => {
 						data={{ 'Дата заказа': '24.09.23', 'Ближайшая доставка': '24.09.23', 'Товаров в заказе': '3' }}
 						btnTitle="Редактировать ✎"
 					/>
-					<Section title="8239 **** **** 2372" subTitle="Банковская карта" btnTitle="Избранные товары ≫" />
+					<FavoriteItems />
 					<Section
 						title="Только для вас"
 						data={{
@@ -43,10 +63,7 @@ const Main = (props: Props) => {
 					/>
 				</div>
 				<div className="flex-1">
-					<Section
-						data={{ 'Дата заказа': '24.09.23', 'Ближайшая доставка': '24.09.23', 'Товаров в заказе': '3' }}
-						btnTitle="Редактировать ✎"
-					/>
+					<Notifications notifications={notifications} />
 				</div>
 			</div>
 		</div>
