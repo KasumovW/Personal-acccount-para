@@ -26,7 +26,6 @@ const Main = (props: Props) => {
 
 	return (
 		<div>
-			<h1 className="mb-[32px] text-[30px] font-medium">Профиль</h1>
 			<div className="flex w-full gap-[36px]">
 				<div className="flex flex-1 flex-col gap-[20px]">
 					<Section
