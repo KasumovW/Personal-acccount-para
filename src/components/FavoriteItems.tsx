@@ -11,7 +11,7 @@ const FavoriteItems: React.FC = () => {
 	const moreCount = 44;
 
 	return (
-		<div className="favorite-items-container flex items-center justify-between rounded bg-white p-4 shadow-custom">
+		<div className="favorite-items-container flex max-w-none items-center justify-between rounded bg-white p-4 shadow-custom md:max-w-[485px]">
 			<div className="flex items-center space-x-2">
 				<div className="heart-icon rounded-full bg-blue-500 p-2">
 					<span role="img" aria-label="favorite">

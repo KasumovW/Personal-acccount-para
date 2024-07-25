@@ -22,12 +22,14 @@ const Notifications: React.FC<NotificationsProps> = ({ notifications }) => {
 			{notifications.map((notification, index) => (
 				<div
 					key={index}
-					className="notification-item mb-4 flex rounded-[8px] bg-[#F5F6F9] p-[16px] shadow-custom"
+					className="notification-item mb-4 flex justify-between rounded-[8px] bg-[#F5F6F9] p-[16px] shadow-custom"
 				>
-					<img src={notification.imageUrl} alt="notification" className="mr-4 h-10 w-10 rounded-full" />
-					<div>
-						<h3 className="text-[16px] font-semibold">{notification.title}</h3>
-						<p className="text-[13px] font-normal">{notification.description}</p>
+					<div className="flex">
+						<img src={notification.imageUrl} alt="notification" className="mr-4 h-10 w-10 rounded-full" />
+						<div>
+							<h3 className="text-[16px] font-semibold">{notification.title}</h3>
+							<p className="text-[13px] font-normal">{notification.description}</p>
+						</div>
 					</div>
 					<button className="box-border h-[28px] rounded-[4px] bg-[#1872C9] px-[20px] text-[14px] font-medium text-white">
 						Посмотреть

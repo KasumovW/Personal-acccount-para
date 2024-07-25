@@ -26,8 +26,8 @@ const Main = (props: Props) => {
 
 	return (
 		<div>
-			<div className="flex w-full gap-[36px]">
-				<div className="flex flex-1 flex-col gap-[20px]">
+			<div className="w-full gap-[36px] md:flex md:flex-wrap">
+				<div className="mb-[20px] flex w-full flex-1 flex-col gap-[20px] md:mb-0">
 					<Section
 						title="Иванов"
 						subTitle="Дмитрий"
@@ -45,7 +45,7 @@ const Main = (props: Props) => {
 						btnTitle="Подробнее ≫"
 					/>
 				</div>
-				<div className="flex w-full flex-1 flex-col gap-[20px]">
+				<div className="mb-[20px] flex w-full flex-1 flex-col gap-[20px]">
 					<Section
 						title="№ 123123123232"
 						subTitle="Cобирается на складе"
@@ -61,7 +61,7 @@ const Main = (props: Props) => {
 						btnTitle="Редактировать ✎"
 					/>
 				</div>
-				<div className="flex-1">
+				<div className="md:flex-2 flex-1">
 					<Notifications notifications={notifications} />
 				</div>
 			</div>
