@@ -28,10 +28,12 @@ const Notifications: React.FC<NotificationsProps> = ({ notifications }) => {
 						<img src={notification.imageUrl} alt="notification" className="mr-4 h-10 w-10 rounded-full" />
 						<div>
 							<h3 className="text-[16px] font-semibold">{notification.title}</h3>
-							<p className="text-[13px] font-normal">{notification.description}</p>
+							<p className="overflow-hidden text-ellipsis whitespace-nowrap text-[13px] font-normal">
+								{notification.description}
+							</p>
 						</div>
 					</div>
-					<button className="box-border h-[28px] rounded-[4px] bg-[#1872C9] px-[20px] text-[14px] font-medium text-white">
+					<button className="box-border hidden h-[28px] rounded-[4px] bg-[#1872C9] px-[10px] text-[14px] font-medium text-white md:block md:px-[20px]">
 						Посмотреть
 					</button>
 				</div>

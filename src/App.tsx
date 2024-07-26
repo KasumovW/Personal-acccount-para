@@ -1,13 +1,11 @@
-import React from 'react'
-import Main from './pages/Main'
-
+import Main from './pages/Main';
 
 const App = () => {
-  return (
-    <div className='max-w-[1570px] m-auto p-[33px] box-border'>
-      <Main />
-    </div>
-  )
-}
+	return (
+		<div className="m-auto box-border max-w-[1570px]">
+			<Main />
+		</div>
+	);
+};
 
-export default App
+export default App;

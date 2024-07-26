@@ -20,7 +20,7 @@ const Section: React.FC<Props> = ({ btnTitle, data, title, subTitle }) => {
 						{subTitle && <p className="text-[13px] font-normal leading-[15px] text-[#898C9B]">{subTitle}</p>}
 					</div>
 				</div>
-				<button className="box-border h-[28px] rounded-[4px] bg-[#1872C9] px-[20px] text-[14px] font-medium text-white">
+				<button className="box-border h-[28px] overflow-hidden text-ellipsis whitespace-nowrap rounded-[4px] bg-[#1872C9] px-[10px] text-[14px] font-medium text-white md:px-[20px]">
 					{btnTitle}
 				</button>
 			</div>
@@ -29,7 +29,9 @@ const Section: React.FC<Props> = ({ btnTitle, data, title, subTitle }) => {
 					Object.entries(data).map(([key, value]) => (
 						<div className="flex">
 							<p className="mb-[16px] text-[15px] font-normal text-[#898C9B]">{key}:</p>
-							<p className="ml-[3px] max-w-[315px] text-[15px] font-normal text-[#0E1528]">{value}</p>
+							<p className="ml-[3px] max-w-[315px] overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-normal text-[#0E1528]">
+								{value}
+							</p>
 						</div>
 					))}
 			</div>
