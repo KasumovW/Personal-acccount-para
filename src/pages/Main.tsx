@@ -26,7 +26,7 @@ const Main = (props: Props) => {
 
 	return (
 		<div>
-			<div className="w-full gap-[36px] md:flex md:flex-wrap">
+			<div className="grid w-full grid-cols-1 gap-0 p-3 md:grid-cols-3 md:gap-[36px]">
 				<div className="mb-[20px] flex w-full flex-1 flex-col gap-[20px] md:mb-0">
 					<Section
 						title="Иванов"

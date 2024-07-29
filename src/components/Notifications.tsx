@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 type Notification = {
 	title: string;
@@ -11,6 +11,19 @@ type NotificationsProps = {
 };
 
 const Notifications: React.FC<NotificationsProps> = ({ notifications }) => {
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
+
+	const handleResize = () => {
+		setIsMobile(window.innerWidth < 480);
+	};
+
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
 	return (
 		<div className="notifications-container rounded bg-white p-4 shadow-custom">
 			<div className="header mb-4 flex items-center justify-between">
@@ -22,18 +35,18 @@ const Notifications: React.FC<NotificationsProps> = ({ notifications }) => {
 			{notifications.map((notification, index) => (
 				<div
 					key={index}
-					className="notification-item mb-4 flex justify-between rounded-[8px] bg-[#F5F6F9] p-[16px] shadow-custom"
+					className="notification-item relative mb-4 flex justify-between rounded-[8px] bg-[#F5F6F9] p-[16px] shadow-custom"
 				>
-					<div className="flex">
+					<div className="flex max-w-full">
 						<img src={notification.imageUrl} alt="notification" className="mr-4 h-10 w-10 rounded-full" />
-						<div>
-							<h3 className="text-[16px] font-semibold">{notification.title}</h3>
-							<p className="overflow-hidden text-ellipsis whitespace-nowrap text-[13px] font-normal">
-								{notification.description}
+						<div className="max-w-full">
+							<h3 className="w-[150px] text-[16px] font-semibold">{notification.title}</h3>
+							<p className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] font-normal">
+								{isMobile ? `${notification.description.slice(0, 35)}...` : notification.description}
 							</p>
 						</div>
 					</div>
-					<button className="box-border hidden h-[28px] rounded-[4px] bg-[#1872C9] px-[10px] text-[14px] font-medium text-white md:block md:px-[20px]">
+					<button className="absolute right-2.5 top-2.5 box-border hidden h-[28px] rounded-[4px] bg-[#1872C9] px-[10px] text-[14px] font-medium text-white md:block md:px-[20px]">
 						Посмотреть
 					</button>
 				</div>
