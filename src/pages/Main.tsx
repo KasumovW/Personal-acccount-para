@@ -10,17 +10,17 @@ const Main = (props: Props) => {
 		{
 			title: 'Заголовок номер 1',
 			description: 'Текст уведомления номер 1 длинного в N символов...',
-			imageUrl: 'https://via.placeholder.com/40'
+			imageUrl: 'https://imgholder.ru/40x40/8493a8/adb9ca.jpg&text=H&font=kelson'
 		},
 		{
 			title: 'Заголовок номер 2',
 			description: 'Текст уведомления номер 2 длинного в N символов...',
-			imageUrl: 'https://via.placeholder.com/40'
+			imageUrl: 'https://imgholder.ru/40x40/8493a8/adb9ca.jpg&text=H&font=kelson'
 		},
 		{
 			title: 'Заголовок номер 3',
 			description: 'Текст уведомления номер 3 длинного в N символов...',
-			imageUrl: 'https://via.placeholder.com/40'
+			imageUrl: 'https://imgholder.ru/40x40/8493a8/adb9ca.jpg&text=H&font=kelson'
 		}
 	];
 
