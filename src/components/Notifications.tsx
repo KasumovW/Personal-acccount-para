@@ -42,7 +42,7 @@ const Notifications: React.FC<NotificationsProps> = ({ notifications }) => {
 						<div className="max-w-full">
 							<h3 className="w-[150px] text-[16px] font-semibold">{notification.title}</h3>
 							<p className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] font-normal">
-								{isMobile ? `${notification.description.slice(0, 35)}...` : notification.description}
+								{isMobile ? `${notification.description.slice(0, 28)}...` : notification.description}
 							</p>
 						</div>
 					</div>
